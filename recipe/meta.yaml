@@ -1,5 +1,5 @@
 {% set name = "pyxel-sim" %}
-{% set version = "0.10" %}
+{% set version = "0.10.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyxel-sim-{{ version }}.tar.gz
-  sha256: 67e1f01ddb09fe726bd2ee252d3cc01beb551028466c197bf38cf72b538438e1
+  sha256: b500c106a692a1bbe24dc5a34df6f38c5c2f785332506e60c9cd905a0bc915e0
 
 build:
   number: 0
@@ -27,6 +27,7 @@ requirements:
     - astropy >=4
     - bokeh
     - dask-core
+    - distributed
     - fsspec
     - h5py
     - holoviews
@@ -50,6 +51,7 @@ requirements:
     - xarray
     - xlrd
     - pygmo
+
 test:
   imports:
     - pyxel
@@ -70,3 +72,4 @@ about:
 extra:
   recipe-maintainers:
     - flemmel
+    - arkomatej
