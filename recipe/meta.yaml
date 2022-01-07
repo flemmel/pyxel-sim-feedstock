@@ -51,6 +51,7 @@ requirements:
     - xarray
     - xlrd
     - pygmo
+    - netcdf4
 
 test:
   imports:
