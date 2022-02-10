@@ -24,7 +24,7 @@ requirements:
     - setuptools >=39.2
     - wheel >=0.29.0
   run:
-    - astropy >=4
+    - astropy <= 5.0
     - bokeh
     - dask-core
     - distributed
