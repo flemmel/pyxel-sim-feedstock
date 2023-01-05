@@ -1,13 +1,13 @@
 {% set name = "pyxel-sim" %}
-{% set version = "1.5" %}
+{% set version = "1.6" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyxel-sim-{{ version }}.tar.gz
-  sha256: 1487b159739c5700bcee74822b431231af0da3fa7ca9adf18bcf6c10d817212c
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyxel_sim-{{ version }}.tar.gz
+  sha256: 599650f4dab962852be5f3e99a26d4cc9faf6f295bc3c93a7040d523fd13b74f
 
 build:
   number: 0
@@ -24,6 +24,7 @@ requirements:
     - wheel >=0.29.0
   run:
     - astropy >=4.3
+    - attrs >=21.3.0
     - bokeh
     - dask-core
     - distributed
@@ -69,3 +70,4 @@ about:
 extra:
   recipe-maintainers:
     - flemmel
+    - constanzeseibert
