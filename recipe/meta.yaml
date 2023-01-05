@@ -22,6 +22,7 @@ requirements:
     - python >=3.7
     - setuptools >=40.1
     - wheel >=0.29.0
+    - versioneer
   run:
     - astropy >=4.3
     - attrs >=21.3.0
