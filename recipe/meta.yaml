@@ -1,5 +1,5 @@
 {% set name = "pyxel-sim" %}
-{% set version = "1.7" %}
+{% set version = "1.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyxel_sim-{{ version }}.tar.gz
-  sha256: d168993eb51e552bdff72c6d4954553c444e73771e3252f07af10e6b166ccb4c
+  sha256: e73f2f59377a89e707338889384cbd19ef115e76a68baaa20c80301753d45b0b
 
 build:
   number: 0
@@ -18,15 +18,17 @@ build:
 
 requirements:
   host:
+    - python >=3.9
+    - setuptools >=63
+    - versioneer ==0.28
+    - wheel
     - pip
-    - python >=3.8
-    - setuptools >=40.1
-    - wheel >=0.29.0
-    - versioneer
   run:
+    - python >=3.9
     - astropy >=4.3
     - attrs >=21.3.0
     - bokeh
+    - click
     - dask-core
     - distributed
     - fsspec >=2021
@@ -34,8 +36,9 @@ requirements:
     - holoviews >=1.15.0
     - ipywidgets >=7.5
     - matplotlib-base >=3.1
+    - netcdf4
     - numba
-    - numpy >=1.20
+    - numpy >=1.21
     - openpyxl
     - pandas
     - pillow
@@ -44,9 +47,10 @@ requirements:
     - scikit-image
     - scipy
     - seaborn
+    - sep
     - tqdm
     - typing-extensions
-    - xarray >=0.19
+    - xarray >=2022.06
     - xlrd
     - pygmo       # Added manually
     - netcdf4
