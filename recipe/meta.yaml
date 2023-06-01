@@ -10,7 +10,7 @@ source:
   sha256: 44176e81c5d9a2122f4e48b6e2556933c06c8eeb54acea41bd20fdd763e45ade
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - pyxel = pyxel.run:main
@@ -25,6 +25,7 @@ requirements:
     - pip
   run:
     - python >=3.9
+    - aiohttp
     - asdf
     - astropy >=4.3
     - attrs >=21.3.0
