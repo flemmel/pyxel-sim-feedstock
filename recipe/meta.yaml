@@ -1,5 +1,5 @@
 {% set name = "pyxel-sim" %}
-{% set version = "1.9" %}
+{% set version = "1.9.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyxel_sim-{{ version }}.tar.gz
-  sha256: 44176e81c5d9a2122f4e48b6e2556933c06c8eeb54acea41bd20fdd763e45ade
+  sha256: 645323832d886ccd3d6590cc248ae6e003acecf581514e92dfef9cb504c0250f
 
 build:
-  number: 1
   noarch: python
-  entry_points:
-    - pyxel = pyxel.run:main
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
@@ -25,39 +23,38 @@ requirements:
     - pip
   run:
     - python >=3.9
-    - aiohttp
-    - asdf
-    - astropy >=4.3
-    - attrs >=21.3.0
-    - bokeh
-    - click
-    - dask
-    - distributed
-    - fsspec >=2021
-    - h5netcdf
-    - h5py
-    - holoviews >=1.15.0
-    - ipywidgets >=7.5
-    - matplotlib >=3.1
-    - netcdf4
     - numba
     - numpy >=1.21
-    - openpyxl
     - pandas
-    - pillow
-    - pygmo  >=2.16.1      # Added manually
-    - pympler
-    - pyyaml
-    - scikit-image
     - scipy
-    - seaborn
-    - sep
-    - tqdm
-    - typing-extensions
     - xarray >=2022.06
     - xarray-datatree >=0.0.12
+    - sep
+    - matplotlib >=3.1
+    - seaborn
+    - holoviews >=1.15.0
+    - bokeh
+    - dask
+    - distributed
+    - ipywidgets >=7.5
+    - astropy >=4.3
+    - fsspec >=2021
+    - aiohttp
+    - h5py
+    - h5netcdf
+    - pyyaml
     - xlrd
-
+    - openpyxl
+    - netcdf4
+    - attrs >=21.3.0
+    - click !=8.1.4
+    - tqdm
+    - typing-extensions
+    - pympler
+    - pillow
+    - scikit-image
+    - asdf # Added manually
+    - pygmo  >=2.16.1      # Added manually
 
 test:
   imports:
