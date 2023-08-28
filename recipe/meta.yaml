@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 2
 
 requirements:
   host:
@@ -30,7 +30,7 @@ requirements:
     - xarray >=2022.06
     - xarray-datatree >=0.0.12
     - sep
-    - matplotlib >=3.1
+    - matplotlib-base >=3.1
     - seaborn
     - holoviews >=1.15.0
     - bokeh
@@ -77,4 +77,3 @@ extra:
   recipe-maintainers:
     - flemmel
     - constanzeseibert
-    
