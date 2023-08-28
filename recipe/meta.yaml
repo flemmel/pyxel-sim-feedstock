@@ -1,5 +1,5 @@
 {% set name = "pyxel-sim" %}
-{% set version = "1.9.1" %}
+{% set version = "1.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyxel_sim-{{ version }}.tar.gz
-  sha256: 645323832d886ccd3d6590cc248ae6e003acecf581514e92dfef9cb504c0250f
+  sha256: 17093caefa545179d5deff520eb404fcb0cf02dcf7bd4a2759ff2672d6827f53
 
 build:
   noarch: python
@@ -47,7 +47,7 @@ requirements:
     - openpyxl
     - netcdf4
     - attrs >=21.3.0
-    - click !=8.1.4
+    - click >8.1.5
     - tqdm
     - typing-extensions
     - pympler
