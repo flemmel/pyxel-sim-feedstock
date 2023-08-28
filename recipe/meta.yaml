@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -47,7 +47,7 @@ requirements:
     - openpyxl
     - netcdf4
     - attrs >=21.3.0
-    - click >8.1.5
+    - click !=8.1.4,!=8.1.5
     - tqdm
     - typing-extensions
     - pympler
