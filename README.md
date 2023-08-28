@@ -1,11 +1,11 @@
-About pyxel-sim
-===============
+About pyxel-sim-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyxel-sim-feedstock/blob/main/LICENSE.txt)
 
 Home: https://esa.gitlab.io/pyxel/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyxel-sim-feedstock/blob/main/LICENSE.txt)
 
 Summary: Pyxel detector simulation framework.
 
@@ -145,6 +145,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@arkomatej](https://github.com/arkomatej/)
+* [@constanzeseibert](https://github.com/constanzeseibert/)
 * [@flemmel](https://github.com/flemmel/)
 
