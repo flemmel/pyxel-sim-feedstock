@@ -53,11 +53,12 @@ requirements:
     - pympler
     - pillow
     - scikit-image
+    - astroquery
+    - specutils
+    - synphot
     - asdf # Added manually
     - pygmo  >=2.16.1 # Added manually
     - poppy # Added manually
-    - hvplot # Added manually (experimental)
-    - datashader # Added manually (experimental)
 
 test:
   imports:
