@@ -17,7 +17,9 @@ build:
 requirements:
   host:
     - python >=3.9
+    - setuptools >=63
     - versioneer ==0.28
+    - wheel
     - pip
   run:
     - python >=3.9
