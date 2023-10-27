@@ -1,5 +1,5 @@
 {% set name = "pyxel-sim" %}
-{% set version = "1.11.1" %}
+{% set version = "1.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,8 +7,8 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyxel_sim-{{ version }}.tar.gz
-  sha256: 2318b81e76d204fba220d44eb3670221099ead4ea88f9963a80cd9336d62f156
-
+  sha256: 53a56f8eb86419e73cfcc322d6f3ce82c2f1bdef752021c82f87ef648bfe1347
+  
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
@@ -32,7 +32,7 @@ requirements:
     - sep
     - matplotlib-base >=3.1
     - seaborn
-    - holoviews >=1.15.0
+    - hvplot
     - bokeh
     - dask
     - distributed
@@ -53,6 +53,9 @@ requirements:
     - pympler
     - pillow
     - scikit-image
+    - astroquery
+    - specutils
+    - synphot
     - astroquery
     - specutils
     - synphot
