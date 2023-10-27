@@ -17,6 +17,7 @@ build:
 requirements:
   host:
     - python >=3.9
+    - versioneer ==0.28
     - pip
   run:
     - python >=3.9
