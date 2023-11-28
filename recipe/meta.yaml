@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyxel_sim-{{ version }}.tar.gz
-  sha256: e156737fba417242ddfb363d8f4849d78620189640f924753a3f65f7926919e1
+  sha256: e20cdcd60904072611bfbc8c85ea59df2c58e051b931c4d0c92178be6d8e7b35
   
 build:
   noarch: python
