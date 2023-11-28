@@ -1,5 +1,5 @@
 {% set name = "pyxel-sim" %}
-{% set version = "1.13" %}
+{% set version = "1.13.1" %}
 
 package:
   name: {{ name|lower }}
@@ -49,7 +49,7 @@ requirements:
     - attrs >=21.3.0
     - click !=8.1.4,!=8.1.5
     - tqdm
-    - typing-extensions
+    - typing-extensions >=4.5
     - pympler
     - pillow
     - scikit-image
