@@ -1,5 +1,5 @@
 {% set name = "pyxel-sim" %}
-{% set version = "1.13.1" %}
+{% set version = "1.14" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyxel_sim-{{ version }}.tar.gz
-  sha256: e20cdcd60904072611bfbc8c85ea59df2c58e051b931c4d0c92178be6d8e7b35
+  sha256: 1fc0aed7b96eb0dc98d63fdf9d0f8cd8da31372f86d7757afe48d55f1c5a8745
   
 build:
   noarch: python
@@ -24,7 +24,7 @@ requirements:
   run:
     - python >=3.9
     - numba
-    - numpy >=1.21
+    - numpy >=1.21,<2
     - pandas
     - scipy
     - xarray >=2022.06
@@ -59,9 +59,11 @@ requirements:
     - astroquery
     - specutils
     - synphot
+    - diskcache
     - asdf # Added manually
     - pygmo  >=2.16.1 # Added manually
     - poppy # Added manually
+    
 
 test:
   imports:
