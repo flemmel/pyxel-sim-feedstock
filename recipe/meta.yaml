@@ -24,7 +24,7 @@ requirements:
   run:
     - python >=3.9
     - numba
-    - numpy >=1.21,<2
+    - numpy <2
     - pandas
     - scipy
     - xarray >=2022.06
