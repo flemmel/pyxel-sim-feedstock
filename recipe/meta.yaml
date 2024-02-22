@@ -33,7 +33,7 @@ requirements:
     - matplotlib-base >=3.1
     - seaborn
     - hvplot
-    - bokeh >= 3.3.0
+    - bokeh >=3.3.0
     - dask
     - distributed
     - ipywidgets >=7.5
