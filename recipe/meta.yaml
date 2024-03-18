@@ -1,5 +1,5 @@
 {% set name = "pyxel-sim" %}
-{% set version = "2.0" %}
+{% set version = "2.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyxel_sim-{{ version }}.tar.gz
-  sha256: 3bf44adef02f0369a3f5074bf50bb7e0eae7259fd58e125d6de68d5ec844839c
+  sha256: 9477ec1f47c6a619b541e21daa6dca708116078ed2b61687413d01485fd4c47f
   
 build:
   noarch: python
@@ -85,4 +85,3 @@ about:
 extra:
   recipe-maintainers:
     - flemmel
-    - constanzeseibert
