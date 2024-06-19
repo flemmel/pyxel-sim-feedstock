@@ -1,5 +1,5 @@
 {% set name = "pyxel-sim" %}
-{% set version = "2.2" %}
+{% set version = "2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyxel_sim-{{ version }}.tar.gz
-  sha256: f92687419444aacbf0f1f53f88186832a3521fcf91b25080f670081bb59ce75e
+  sha256: 20ea0f5e4a44df35e57587ebbb9c61649cf9222efa2d810db58067ccad6552b0
 
 build:
+  entry_points:
+    - pyxel = pyxel.run:main
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
@@ -46,7 +48,7 @@ requirements:
     - pyyaml
     - xlrd
     - openpyxl
-    - netcdf4
+    - netcdf4 !=1.7.1
     - attrs >=21.3.0
     - click !=8.1.4,!=8.1.5
     - tqdm
@@ -61,11 +63,12 @@ requirements:
     - specutils
     - synphot
     - diskcache
+    - rich
     - asdf # Added manually
     - pygmo  >=2.16.1 # Added manually
     - poppy # Added manually
     - panel # Added manually
-    
+
 
 test:
   imports:
