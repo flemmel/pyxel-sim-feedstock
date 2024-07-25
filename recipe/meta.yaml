@@ -1,5 +1,5 @@
 {% set name = "pyxel-sim" %}
-{% set version = "2.3" %}
+{% set version = "2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyxel_sim-{{ version }}.tar.gz
-  sha256: 20ea0f5e4a44df35e57587ebbb9c61649cf9222efa2d810db58067ccad6552b0
+  sha256: ec2e4fa219b8783ddce7a0478d78a8f870bc7abaeb74a3452590724ba6e6df23
 
 build:
   entry_points:
@@ -26,29 +26,26 @@ requirements:
   run:
     - python >=3.9
     - numba
-    - numpy >=1.21,<2
+    - numpy >=1.23
     - pandas
     - scipy
     - xarray >=2022.06
     - xarray-datatree >=0.0.12
-    - sep
     - matplotlib-base >=3.1
     - seaborn
-    - hvplot
+    - hvplot >=0.9
     - bokeh >=3.3.0
     - panel
-    - dask
+    - dask-core
     - distributed
     - ipywidgets >=7.5
     - astropy >=4.3
     - fsspec >=2021
     - aiohttp
-    - h5py
     - h5netcdf
     - pyyaml
     - xlrd
     - openpyxl
-    - netcdf4 !=1.7.1
     - attrs >=21.3.0
     - click !=8.1.4,!=8.1.5
     - tqdm
@@ -59,16 +56,8 @@ requirements:
     - astroquery
     - specutils
     - synphot
-    - astroquery
-    - specutils
-    - synphot
     - diskcache
     - rich
-    - asdf # Added manually
-    - pygmo  >=2.16.1 # Added manually
-    - poppy # Added manually
-    - panel # Added manually
-
 
 test:
   imports:
