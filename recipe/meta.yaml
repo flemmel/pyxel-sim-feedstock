@@ -14,7 +14,7 @@ build:
     - pyxel = pyxel.run:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -31,6 +31,7 @@ requirements:
     - scipy
     - xarray >=2022.06
     - xarray-datatree >=0.0.12
+    - sep
     - matplotlib-base >=3.1
     - seaborn
     - hvplot >=0.9
@@ -56,8 +57,16 @@ requirements:
     - astroquery
     - specutils
     - synphot
+    - astroquery
+    - specutils
+    - synphot
     - diskcache
     - rich
+    - asdf # Added manually
+    - pygmo  >=2.16.1 # Added manually
+    - poppy # Added manually
+    - panel # Added manually
+
 
 test:
   imports:
