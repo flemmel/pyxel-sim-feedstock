@@ -14,7 +14,7 @@ build:
     - pyxel = pyxel.run:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   host:
@@ -29,7 +29,7 @@ requirements:
     - numpy >=1.23
     - pandas
     - scipy
-    - xarray >=2022.06
+    - xarray <2024.7.0
     - xarray-datatree >=0.0.12
     - sep
     - matplotlib-base >=3.1
