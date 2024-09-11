@@ -68,14 +68,8 @@ requirements:
 
 test:
   imports:
-    - build
-    - data
-    - dist
-    - htmlcov
-    - output
-    - outputs
     - pyxel
-    - pyxel-sim
+    - pyxel.calibration
   commands:
     - pip check
     - pyxel --help
