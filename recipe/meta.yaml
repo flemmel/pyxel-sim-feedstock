@@ -1,20 +1,21 @@
 {% set name = "pyxel-sim" %}
-{% set version = "2.4.1" %}
+{% set version = "2.5" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyxel_sim-{{ version }}.tar.gz
-  sha256: 265e5ffdf944a0b9de577f0779a7a197a3f756813c2084ffd624908d1316d8b8
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyxel_sim-{{ version }}.tar.gz
+  sha256: b935d15e6db511a4c8605dd11843d4c7aa0c2e8d1a1a53a69586cbc30eb68217
 
 build:
   entry_points:
     - pyxel = pyxel.run:main
+    - pyxel-sim = pyxel.run:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   host:
@@ -25,14 +26,14 @@ requirements:
     - pip
   run:
     - python >=3.9
-    - numba
-    - numpy >=1.23
-    - pandas
-    - scipy
-    - xarray <2024.7.0
+    - numba >=0.56.4
+    - numpy >=1.24
+    - pandas >=1.5
+    - scipy >=1.10
+    - xarray >=2023.12.0
     - xarray-datatree >=0.0.12
     - sep
-    - matplotlib-base >=3.1
+    - matplotlib-base >=3.6
     - seaborn
     - hvplot >=0.9
     - bokeh >=3.3.0
@@ -53,10 +54,7 @@ requirements:
     - typing-extensions >=4.5
     - pympler
     - pillow
-    - scikit-image
-    - astroquery
-    - specutils
-    - synphot
+    - scikit-image >=0.20.0
     - astroquery
     - specutils
     - synphot
@@ -70,11 +68,18 @@ requirements:
 
 test:
   imports:
+    - build
+    - data
+    - dist
+    - htmlcov
+    - output
+    - outputs
     - pyxel
-    - pyxel.calibration
+    - pyxel-sim
   commands:
     - pip check
     - pyxel --help
+    - pyxel-sim --help
   requires:
     - pip
 
