@@ -1,5 +1,5 @@
 {% set name = "pyxel-sim" %}
-{% set version = "2.6" %}
+{% set version = "2.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyxel_sim-{{ version }}.tar.gz
-  sha256: 1a0b657c25164514b2c2eaf287455badd2e6b20d676dd4cc5673c00c7bfe7e58
+  sha256: 8e1880c05371f3ef482671f83a4a8a9eb8c3640d8a78a1014913d98fe8a250fd
 
 build:
   entry_points:
